@@ -1,0 +1,16 @@
+$(document).ready(function(){
+     $('.slider__items').slick({
+         dots:true,
+         speed:1000,
+         initialSlide:1,
+         autoplay:false,
+         autoplaySpeed:7000,
+     });
+     $('.header__burger').click(function(event){
+         $('.header__burger,.header__menu').toggleClass('active');
+         $('body').toggleClass('lock');
+     })
+     $('.footer_title,.footer__links').click(function(event){
+         $(this).toggleClass('active').next().slideToggle(300);
+     });
+});
